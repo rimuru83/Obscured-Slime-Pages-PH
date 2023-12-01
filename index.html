@@ -54,6 +54,7 @@
             color: white;
             text-decoration: none;
             margin: 0 15px;
+            display: inline-block;
         }
 
         section {
@@ -70,16 +71,36 @@
             color: white;
             text-align: center;
             padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        }
+
+        /* Media Query for Tablet View */
+        @media (max-width: 768px) {
+            header {
+                height: 200px;
+            }
+
+            .overlay h1 {
+                font-size: 1.8em;
+            }
+
+            nav {
+                padding: 5px;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+
+            section {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/cover.jpg" alt="Shop Cover Photo">
+        <img src="https://github.com/rimuru83/my-website/raw/main/cover.jpg" alt="Shop Cover Photo">
         <div class="overlay">
             <h1>Welcome to Obscured Slime Pages Shop</h1>
             <p>Explore our collection of digital manga titles.</p>
