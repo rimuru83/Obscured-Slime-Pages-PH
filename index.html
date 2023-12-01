@@ -5,16 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obscured Slime Pages</title>
 
-    <!-- Link to Kaushan Script font from Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap">
+    <!-- Link to a comic-style font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap">
 
     <style>
         body {
-            font-family: 'Kaushan Script', cursive;
+            font-family: 'Comic Neue', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0; /* Light Gray */
             color: #333; /* Dark Gray Text Color */
+        }
+      /* Genre box styling */
+        .genre-boxes {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .genre-box {
+            padding: 10px;
+            border: 2px solid #29465B;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .genre-box:hover {
+            background-color: #29465B;
+            color: white;
         }
 
         header {
@@ -55,7 +74,6 @@
         }
 
         nav a {
-            font-family: 'Kaushan Script', cursive;
             color: white;
             text-decoration: none;
             margin: 0 15px;
@@ -115,18 +133,11 @@
 </head>
 <body>
 
-    <!-- Your HTML content goes here -->
-
-</body>
-</html>
-
-<body>
-
     <header>
-        <img src="https://github.com/rimuru83/my-website/raw/main/cover.jpg" alt="Shop Cover Photo">
+        <img src="https://github.com/rimuru83/my-website/raw/main/cover.jpg" alt="Obscured Slime Pages Shop Cover">
         <div class="overlay">
             <h1>Obscured Slime Pages Library</h1>
-            <p>Explore our collection of manga titles.</p>
+            <p>Explore our collection of manga titles for your Kindle, Kobo, and iPad.</p>
         </div>
     </header>
 
@@ -139,12 +150,22 @@
     </nav>
 
     <section id="home">
-        <h2>Welcome to Obscured Slime Pages</h2>
-        <p>Explore our collection of digital manga titles.</p>
+        <h2>Welcome to Obscured Slime Pages!</h2>
+        <p>We pride ourselves as the premier manga and manhwa provider catering specifically to Kindle and Kobo devices.</p>
     </section>
 
     <section id="shop">
         <h2>Shop</h2>
+       <!-- Genre boxes -->
+        <div class="genre-boxes">
+            <div class="genre-box" onclick="filterByGenre('Shonen')">Shonen</div>
+            <div class="genre-box" onclick="filterByGenre('Shojo')">Shojo</div>
+            <div class="genre-box" onclick="filterByGenre('Seinen')">Seinen</div>
+            <div class="genre-box" onclick="filterByGenre('Josei')">Josei</div>
+            <div class="genre-box" onclick="filterByGenre('Yaoi')">Yaoi</div>
+            <div class="genre-box" onclick="filterByGenre('Yuri')">Yuri</div>
+        </div>
+
         <div class="manga-item">
             <!-- Manga item details as before -->
         </div>
@@ -177,6 +198,13 @@
     <footer>
         &copy; 2023 Obscured Slime Pages Shop
     </footer>
-
+ <!-- JavaScript for handling genre filtering -->
+    <script>
+        function filterByGenre(genre) {
+            // Add your logic for filtering by genre here
+            console.log('Filtering by genre:', genre);
+            // You can update the display of manga items based on the selected genre
+        }
+    </script>
 </body>
 </html>
