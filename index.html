@@ -55,6 +55,19 @@
             text-decoration: none;
             margin: 0 15px;
             display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid #333; /* Border color same as background */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Emboss effect */
+            transition: box-shadow 0.3s ease; /* Smooth transition for the emboss effect */
+
+            /* Additional styles for better appearance */
+            position: relative;
+            z-index: 1;
+        }
+
+        nav a:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Increased shadow on hover */
         }
 
         section {
