@@ -16,7 +16,7 @@
             background-color: #f0f0f0; /* Light Gray */
             color: #333; /* Dark Gray Text Color */
         }
-      /* Genre box styling */
+     /* Genre box styling */
         .genre-boxes {
             display: flex;
             justify-content: space-around;
@@ -129,6 +129,33 @@
                 padding: 15px;
             }
         }
+      /* Center-align the text in the #shop section */
+        #shop {
+            text-align: center;
+        }
+       /* Genre box styling with glow effect */
+        .genre-boxes {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .genre-box {
+            padding: 10px;
+            border: 2px solid #29465B;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+            text-decoration: none; /* Remove underline on hover */
+            color: #29465B; /* Set text color to match border color */
+            box-shadow: 0 0 10px rgba(41, 70, 91, 0.5); /* Initial box-shadow for the glow effect */
+        }
+
+        .genre-box:hover {
+            background-color: #29465B;
+            color: white;
+            box-shadow: 0 0 20px rgba(41, 70, 91, 0.7); /* Increased shadow on hover for the glow effect */
+        }
     </style>
 </head>
 <body>
@@ -142,11 +169,12 @@
     </header>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#shop">Shop</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact Us</a>
-        <a href="#payment">Payment Details</a>
+        <!-- Navigation links with smooth scroll -->
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#shop" class="nav-link">Shop</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact Us</a>
+        <a href="#payment" class="nav-link">Payment Details</a>
     </nav>
 
     <section id="home">
@@ -155,15 +183,15 @@
     </section>
 
     <section id="shop">
-        <h2>Shop</h2>
-       <!-- Genre boxes -->
+        <h2>SELECT YOUR GENRE</h2>
+        <!-- Genre boxes as clickable links -->
         <div class="genre-boxes">
-            <div class="genre-box" onclick="filterByGenre('Shonen')">Shonen</div>
-            <div class="genre-box" onclick="filterByGenre('Shojo')">Shojo</div>
-            <div class="genre-box" onclick="filterByGenre('Seinen')">Seinen</div>
-            <div class="genre-box" onclick="filterByGenre('Josei')">Josei</div>
-            <div class="genre-box" onclick="filterByGenre('Yaoi')">Yaoi</div>
-            <div class="genre-box" onclick="filterByGenre('Yuri')">Yuri</div>
+            <a href="shonen.html" class="genre-box">Shonen</a>
+            <a href="shojo.html" class="genre-box">Shojo</a>
+            <a href="seinen.html" class="genre-box">Seinen</a>
+            <a href="josei.html" class="genre-box">Josei</a>
+            <a href="yaoi.html" class="genre-box">Yaoi</a>
+            <a href="yuri.html" class="genre-box">Yuri</a>
         </div>
 
         <div class="manga-item">
@@ -198,13 +226,22 @@
     <footer>
         &copy; 2023 Obscured Slime Pages Shop
     </footer>
- <!-- JavaScript for handling genre filtering -->
+ <!-- JavaScript for handling smooth scroll -->
     <script>
-        function filterByGenre(genre) {
-            // Add your logic for filtering by genre here
-            console.log('Filtering by genre:', genre);
-            // You can update the display of manga items based on the selected genre
-        }
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
