@@ -31,26 +31,9 @@
             position: fixed;
             bottom: 0;
             width: 100%;
-        }
-     /* Genre box styling */
-        .genre-boxes {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
+           z-index: 2; /* Set a higher z-index to bring it to the front */
         }
 
-        .genre-box {
-            padding: 10px;
-            border: 2px solid #29465B;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .genre-box:hover {
-            background-color: #29465B;
-            color: white;
-        }
 
         header {
             position: relative;
@@ -194,36 +177,11 @@
             }
         }
       /* Center-align the text in the #shop and welcome section section */
-        #shop {
-            text-align: center;
-        }
+        
       #home {
             text-align: center;
         }
-       /* Genre box styling with glow effect */
-        .genre-boxes {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-        }
-
-        .genre-box {
-            padding: 10px;
-            border: 2px solid #29465B;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
-            text-decoration: none; /* Remove underline on hover */
-            color: #29465B; /* Set text color to match border color */
-            box-shadow: 0 0 10px rgba(41, 70, 91, 0.5); /* Initial box-shadow for the glow effect */
-        }
-
-        .genre-box:hover {
-            background-color: #29465B;
-            color: white;
-            box-shadow: 0 0 20px rgba(41, 70, 91, 0.7); /* Increased shadow on hover for the glow effect */
-        }
-    </style>
+       
   <style>
         /* Additional style for smoother container */
         #photo-showcase {
@@ -301,24 +259,6 @@
         </div>
     </section>
   
-    <section id="shop">
-        <h2>SELECT YOUR GENRE</h2>
-        <!-- Genre boxes as clickable links -->
-        <div class="genre-boxes">
-            <a href="shonen.html" class="genre-box">Shonen</a>
-            <a href="shojo.html" class="genre-box">Shojo</a>
-            <a href="seinen.html" class="genre-box">Seinen</a>
-            <a href="josei.html" class="genre-box">Josei</a>
-            <a href="yaoi.html" class="genre-box">Yaoi</a>
-            <a href="yuri.html" class="genre-box">Yuri</a>
-        </div>
-
-        <div class="manga-item">
-            <!-- Manga item details as before -->
-        </div>
-
-        <!-- Add more manga items as needed -->
-    </section>
 
     <section id="about">
         <h2>About Us</h2>
@@ -352,25 +292,24 @@
         </ol>
     </section>
   
-   <section id="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-info">
-            <p>
-                <strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=100094584806599&mibextid=ZbWKwL" target="_blank">Message us here</a>
-            </p>
-            <p>
-                <strong>Instagram:</strong> <a href="https://instagram.com/obscured_slime_pages?igshid=MzMyNGUyNmU2YQ==" target="_blank">Message us here</a>
-            </p>
-        </div>
-        <div class="social-icons">
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+        <p>
             <a href="https://www.facebook.com/profile.php?id=100094584806599&mibextid=ZbWKwL" target="_blank">
-                <img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Icons/FB.png" alt="Facebook Logo">
+                <img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Icons/FB.png" alt="Contact Icon" style="width: 20px; margin-right: 10px;">
             </a>
+            <strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=100094584806599&mibextid=ZbWKwL" target="_blank">Message us here</a>
+        </p>
+        <p>
             <a href="https://instagram.com/obscured_slime_pages?igshid=MzMyNGUyNmU2YQ==" target="_blank">
-                <img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Icons/INSTA.png" alt="Instagram Logo">
+                <img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Icons/INSTA.png" alt="Contact Icon" style="width: 20px; margin-right: 10px;">
             </a>
-        </div>
-    </section>
+            <strong>Instagram:</strong> <a href="https://instagram.com/obscured_slime_pages?igshid=MzMyNGUyNmU2YQ==" target="_blank">Message us here</a>
+        </p>
+    </div>
+</section>
+
 
    <footer>
         &copy; 2023 Obscured Slime Pages Shop
