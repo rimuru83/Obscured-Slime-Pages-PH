@@ -179,6 +179,16 @@
             height: auto;
             border-radius: 10px;
         }
+    .swiper-container {
+    position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
         /* Media Query for smaller screens */
         @media (max-width: 768px) {
@@ -208,6 +218,7 @@
         <h2>Welcome to Obscured Slime Pages!</h2>
         <p>We pride ourselves as the best manga and manhwa provider you can find catering specifically to Kindle and Kobo devices.</p>
     </section>
+  
  <!-- New section for photo showcase -->
    <section id="photo-showcase" style="text-align: center;">
     <h2>These are the Best Photos We Picked</h2>
@@ -219,7 +230,7 @@
                 <!-- Add more slides for each photo -->
                 <!-- Continue adding slides up to Photo 22 -->
                 <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/22.jpeg" alt="Photo 22"></div>
-            </div>
+           </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
             <!-- Add Navigation -->
