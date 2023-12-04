@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obscured Slime Pages</title>
+ <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- Link to a comic-style font from Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap">
@@ -129,8 +131,11 @@
                 padding: 15px;
             }
         }
-      /* Center-align the text in the #shop section */
+      /* Center-align the text in the #shop and welcome section section */
         #shop {
+            text-align: center;
+        }
+      #home {
             text-align: center;
         }
        /* Genre box styling with glow effect */
@@ -157,6 +162,31 @@
             box-shadow: 0 0 20px rgba(41, 70, 91, 0.7); /* Increased shadow on hover for the glow effect */
         }
     </style>
+  <style>
+        /* Additional style for smoother container */
+        #photo-showcase {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .swiper-container {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            #photo-showcase {
+                max-width: 90%; /* Adjust the percentage as needed */
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -178,7 +208,26 @@
         <h2>Welcome to Obscured Slime Pages!</h2>
         <p>We pride ourselves as the best manga and manhwa provider you can find catering specifically to Kindle and Kobo devices.</p>
     </section>
-
+ <!-- New section for photo showcase -->
+   <section id="photo-showcase" style="text-align: center;">
+    <h2>These are the Best Photos We Picked</h2>
+    <p>From hundreds of photo feedback by our customers using our manga.</p>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/01.jpeg" alt="Photo 1"></div>
+                <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/02.jpeg" alt="Photo 2"></div>
+                <!-- Add more slides for each photo -->
+                <!-- Continue adding slides up to Photo 22 -->
+                <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/22.jpeg" alt="Photo 22"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+  
     <section id="shop">
         <h2>SELECT YOUR GENRE</h2>
         <!-- Genre boxes as clickable links -->
@@ -204,6 +253,7 @@
         <p>Our mission is to provide an extensive collection of high-quality manga titles for enthusiasts worldwide.</p>
     </section>
 
+  
     <section id="contact">
         <h2>Contact Us</h2>
         <p>If you have any questions or feedback, feel free to reach out to us:</p>
@@ -223,7 +273,10 @@
     <footer>
         &copy; 2023 Obscured Slime Pages Shop
     </footer>
- <!-- JavaScript for handling smooth scroll -->
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript for handling smooth scroll and Swiper initialization -->
     <script>
         // Smooth scroll for navigation links
         document.querySelectorAll('.nav-link').forEach(link => {
@@ -238,6 +291,24 @@
                     });
                 }
             });
+        });
+
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000, // 3 seconds delay between slides
+                disableOnInteraction: false,
+            },
         });
     </script>
 </body>
