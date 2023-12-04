@@ -10,13 +10,27 @@
     <!-- Link to a comic-style font from Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap">
 
-    <style>
+     <style>
         body {
             font-family: 'Comic Neue', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0; /* Light Gray */
             color: #333; /* Dark Gray Text Color */
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
      /* Genre box styling */
         .genre-boxes {
@@ -107,6 +121,54 @@
             color: white;
             text-align: center;
             padding: 10px;
+        }
+      
+      h2 {
+            color: #29465B; /* Dark Blue */
+            border-bottom: 2px solid #29465B; /* Dark Blue */
+            padding-bottom: 10px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+      
+      .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: #29465B; /* Dark Blue */
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #29465B; /* Dark Blue */
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .social-icons a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons img {
+            width: 30px; /* Adjust size as needed */
+            margin-right: 10px;
         }
 
         /* Media Query for Tablet View */
@@ -260,30 +322,60 @@
 
     <section id="about">
         <h2>About Us</h2>
-        <p>Welcome to Obscured Slime Pages, your go-to destination for digital manga content.</p>
-        <p>Our mission is to provide an extensive collection of high-quality manga titles for enthusiasts worldwide.</p>
-    </section>
+        <p>
+            <strong>Welcome to Obscured Slime Pages,</strong> your premier destination for digital manga content.
+        </p>
+        <p>
+            <strong>Our mission is to curate an extensive collection</strong> of high-quality manga, manhwa, and comics titles for enthusiasts worldwide.
+        </p>
+        <p>
+            Comprising computer-savvy individuals and passionate manga and anime fans, we derive immense joy from reading manga and books. Our aim is to share this delightful experience with others. Reading manga on your Kindle or Kobo offers a superior alternative to physical copies—it's way cheaper and allows you to indulge in your favorite reads anywhere.
+        </p>
 
+        <h2>Why Choose Us?</h2>
+        <ol>
+            <li>
+                <strong>Optimized Manga File Size:</strong> While maintaining the quality of manga pages, we prioritize lightweight file sizes, especially for devices with limited storage (less than 8GB). Trust us; with our manga, you can store entire One Piece volumes in just 4GB of device storage. Our manga file sizes range from 20MB to 50MB, exclusively on Kindle.
+            </li>
+            <li>
+                <strong>Manga Quality:</strong> We steadfastly focus on delivering an exceptional reading experience. As avid manga enthusiasts ourselves, we ensure crisp pages and incorporate additional features into our Epub files.
+            </li>
+            <li>
+                <strong>Manga Page Ratio:</strong> Recognizing the diversity in device sizes, we provide perfectly fitted pages to cater to smaller devices.
+            </li>
+            <li>
+                <strong>Efficient Transfer Methods:</strong> Acknowledging our customers' busy lives, we continuously refine our instructions to make the transfer process simple and swift. Comprehensive instructions are included in the files, and our chat support is actively available to guide you should you have any questions.
+            </li>
+            <li>
+                <strong>Engagement through Facebook Group:</strong> For those who avail our manga, we have a dedicated Facebook group. Stay updated on the status of manga titles, the latest additions to our collection, and service updates. Join our community to enhance your manga experience with us.
+            </li>
+        </ol>
+    </section>
   
-    <section id="contact">
+   <section id="contact">
         <h2>Contact Us</h2>
-        <p>If you have any questions or feedback, feel free to reach out to us:</p>
-        <p>Email: info@obscuredslimepages.com</p>
+        <div class="contact-info">
+            <p>
+                <strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=100094584806599&mibextid=ZbWKwL" target="_blank">Message us here</a>
+            </p>
+            <p>
+                <strong>Instagram:</strong> <a href="https://instagram.com/obscured_slime_pages?igshid=MzMyNGUyNmU2YQ==" target="_blank">Message us here</a>
+            </p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100094584806599&mibextid=ZbWKwL" target="_blank">
+                <img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Icons/FB.png" alt="Facebook Logo">
+            </a>
+            <a href="https://instagram.com/obscured_slime_pages?igshid=MzMyNGUyNmU2YQ==" target="_blank">
+                <img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Icons/INSTA.png" alt="Instagram Logo">
+            </a>
+        </div>
     </section>
 
-    <section id="payment">
-        <h2>Payment Details</h2>
-        <p>We accept the following payment methods:</p>
-        <ul>
-            <li>Visa</li>
-            <li>MasterCard</li>
-            <li>PayPal</li>
-        </ul>
-    </section>
-
-    <footer>
+   <footer>
         &copy; 2023 Obscured Slime Pages Shop
     </footer>
+  
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -322,5 +414,6 @@
             },
         });
     </script>
+ 
 </body>
 </html>
