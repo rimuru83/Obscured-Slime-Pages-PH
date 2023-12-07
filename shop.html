@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obscured Slime Pages</title>
+ <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Link to a comic-style font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap">
+
+     <style>
+        body {
+            font-family: 'Comic Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Light Gray */
+            color: #333; /* Dark Gray Text Color */
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+     /* Genre box styling */
+        .genre-boxes {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .genre-box {
+            padding: 10px;
+            border: 2px solid #29465B;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .genre-box:hover {
+            background-color: #29465B;
+            color: white;
+        }
+
+        header {
+            position: relative;
+            height: 300px; /* Adjust the height as needed */
+        }
+
+        header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Black with 50% Transparency */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff; /* White Text Color */
+        }
+
+        .overlay h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: #29465B;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid #333; /* Border color same as background */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(135, 206, 250, 0.5); /* Sky Blue Emboss effect */
+            transition: box-shadow 0.3s ease; /* Smooth transition for the emboss effect */
+            position: relative;
+            z-index: 1;
+        }
+
+        nav a:hover {
+            box-shadow: 0 0 20px rgba(135, 206, 250, 0.7); /* Increased shadow on hover */
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+      
+      h2 {
+            color: #29465B; /* Dark Blue */
+            border-bottom: 2px solid #29465B; /* Dark Blue */
+            padding-bottom: 10px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+      
+      .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: #29465B; /* Dark Blue */
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #29465B; /* Dark Blue */
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .social-icons a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons img {
+            width: 30px; /* Adjust size as needed */
+            margin-right: 10px;
+        }
+
+        /* Media Query for Tablet View */
+        @media (max-width: 768px) {
+            header {
+                height: 200px;
+            }
+
+            .overlay h1 {
+                font-size: 1.8em;
+            }
+
+            nav {
+                padding: 5px;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+
+            section {
+                padding: 15px;
+            }
+        }
+      /* Center-align the text in the #shop and welcome section section */
+        #shop {
+            text-align: center;
+        }
+      #home {
+            text-align: center;
+        }
+       /* Genre box styling with glow effect */
+        .genre-boxes {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .genre-box {
+            padding: 10px;
+            border: 2px solid #29465B;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+            text-decoration: none; /* Remove underline on hover */
+            color: #29465B; /* Set text color to match border color */
+            box-shadow: 0 0 10px rgba(41, 70, 91, 0.5); /* Initial box-shadow for the glow effect */
+        }
+
+        .genre-box:hover {
+            background-color: #29465B;
+            color: white;
+            box-shadow: 0 0 20px rgba(41, 70, 91, 0.7); /* Increased shadow on hover for the glow effect */
+        }
+    </style>
+  <style>
+        /* Additional style for smoother container */
+        #photo-showcase {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .swiper-container {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    .swiper-container {
+    position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            #photo-showcase {
+                max-width: 90%; /* Adjust the percentage as needed */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://github.com/rimuru83/my-website/raw/main/cover.jpg" alt="Obscured Slime Pages Shop Cover">
+        <div class="overlay">
+            <h1>Obscured Slime Pages Library</h1>
+            <p>Explore our collection of manga titles for your Kindle, Kobo, and iPad.</p>
+        </div>
+    </header>
+
+    <nav>
+        <!-- Navigation links with smooth scroll -->
+         <a href="https://rimuru83.github.io/Tempest-Gallery/" target="_blank">Tempest Feedbacks</a>
+        <a href="#shop" class="nav-link">Shop</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Obscured Slime Pages!</h2>
+        <p>We pride ourselves as the best manga and manhwa provider you can find catering specifically to Kindle and Kobo devices.</p>
+    </section>
+  
+ <!-- New section for photo showcase -->
+   <section id="photo-showcase" style="text-align: center;">
+    <h2>These are the Best Photos We Picked</h2>
+    <p>From hundreds of photo feedback by our customers using our manga.</p>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/01.jpeg" alt="Photo 1"></div>
+                <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/02.jpeg" alt="Photo 2"></div>
+                <!-- Add more slides for each photo -->
+                <!-- Continue adding slides up to Photo 22 -->
+                <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/22.jpeg" alt="Photo 22"></div>
+           </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+  
+    <section id="shop">
+        <h2>SELECT YOUR GENRE</h2>
+        <!-- Genre boxes as clickable links -->
+        <div class="genre-boxes">
+            <a href="shonen.html" class="genre-box">Shonen</a>
+            <a href="shojo.html" class="genre-box">Shojo</a>
+            <a href="seinen.html" class="genre-box">Seinen</a>
+            <a href="josei.html" class="genre-box">Josei</a>
+            <a href="yaoi.html" class="genre-box">Yaoi</a>
+            <a href="yuri.html" class="genre-box">Yuri</a>
+        </div>
+
+        <div class="manga-item">
+            <!-- Manga item details as before -->
+        </div>
+
+        <!-- Add more manga items as needed -->
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            <strong>Welcome to Obscured Slime Pages,</strong> your premier destination for digital manga content.
+        </p>
+        <p>
+            <strong>Our mission is to curate an extensive collection</strong> of high-quality manga, manhwa, and comics titles for enthusiasts worldwide.
+        </p>
+        <p>
+            Comprising computer-savvy individuals and passionate manga and anime fans, we derive immense joy from reading manga and books. Our aim is to share this delightful experience with others. Reading manga on your Kindle or Kobo offers a superior alternative to physical copies—it's way cheaper and allows you to indulge in your favorite reads anywhere.
+        </p>
+
+        <h2>Why Choose Us?</h2>
+        <ol>
+            <li>
+                <strong>Optimized Manga File Size:</strong> While maintaining the quality of manga pages, we prioritize lightweight file sizes, especially for devices with limited storage (less than 8GB). Trust us; with our manga, you can store entire One Piece volumes in just 4GB of device storage. Our manga file sizes range from 20MB to 50MB, exclusively on Kindle.
+            </li>
+            <li>
+                <strong>Manga Quality:</strong> We steadfastly focus on delivering an exceptional reading experience. As avid manga enthusiasts ourselves, we ensure crisp pages and incorporate additional features into our Epub files.
+            </li>
+            <li>
+                <strong>Manga Page Ratio:</strong> Recognizing the diversity in device sizes, we provide perfectly fitted pages to cater to smaller devices.
+            </li>
+            <li>
+                <strong>Efficient Transfer Methods:</strong> Acknowledging our customers' busy lives, we continuously refine our instructions to make the transfer process simple and swift. Comprehensive instructions are included in the files, and our chat support is actively available to guide you should you have any questions.
+            </li>
+            <li>
+                <strong>Engagement through Facebook Group:</strong> For those who avail our manga, we have a dedicated Facebook group. Stay updated on the status of manga titles, the latest additions to our collection, and service updates. Join our community to enhance your manga experience with us.
+            </li>
+        </ol>
+    </section>
+  
+   <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>
+                <strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=100094584806599&mibextid=ZbWKwL" target="_blank">Message us here</a>
+            </p>
+            <p>
+                <strong>Instagram:</strong> <a href="https://instagram.com/obscured_slime_pages?igshid=MzMyNGUyNmU2YQ==" target="_blank">Message us here</a>
+            </p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100094584806599&mibextid=ZbWKwL" target="_blank">
+                <img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Icons/FB.png" alt="Facebook Logo">
+            </a>
+            <a href="https://instagram.com/obscured_slime_pages?igshid=MzMyNGUyNmU2YQ==" target="_blank">
+                <img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Icons/INSTA.png" alt="Instagram Logo">
+            </a>
+        </div>
+    </section>
+
+   <footer>
+        &copy; 2023 Obscured Slime Pages Shop
+    </footer>
+  
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript for handling smooth scroll and Swiper initialization -->
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000, // 3 seconds delay between slides
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+ 
+</body>
+</html>
