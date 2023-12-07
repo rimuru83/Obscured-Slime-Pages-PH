@@ -31,26 +31,9 @@
             position: fixed;
             bottom: 0;
             width: 100%;
-        }
-     /* Genre box styling */
-        .genre-boxes {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
+           z-index: 2; /* Set a higher z-index to bring it to the front */
         }
 
-        .genre-box {
-            padding: 10px;
-            border: 2px solid #29465B;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .genre-box:hover {
-            background-color: #29465B;
-            color: white;
-        }
 
         header {
             position: relative;
@@ -193,37 +176,8 @@
                 padding: 15px;
             }
         }
-      /* Center-align the text in the #shop and welcome section section */
-        #shop {
-            text-align: center;
-        }
-      #home {
-            text-align: center;
-        }
-       /* Genre box styling with glow effect */
-        .genre-boxes {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-        }
-
-        .genre-box {
-            padding: 10px;
-            border: 2px solid #29465B;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
-            text-decoration: none; /* Remove underline on hover */
-            color: #29465B; /* Set text color to match border color */
-            box-shadow: 0 0 10px rgba(41, 70, 91, 0.5); /* Initial box-shadow for the glow effect */
-        }
-
-        .genre-box:hover {
-            background-color: #29465B;
-            color: white;
-            box-shadow: 0 0 20px rgba(41, 70, 91, 0.7); /* Increased shadow on hover for the glow effect */
-        }
-    </style>
+      
+       
   <style>
         /* Additional style for smoother container */
         #photo-showcase {
@@ -258,6 +212,54 @@
                 max-width: 90%; /* Adjust the percentage as needed */
             }
         }
+        /* Genre box styling */
+        .genre-boxes {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .genre-box {
+            padding: 10px;
+            border: 2px solid #29465B;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .genre-box:hover {
+            background-color: #29465B;
+            color: white;
+        }
+
+#shop {
+            text-align: center;
+        }
+        
+        /* Genre box styling with glow effect */
+        .genre-boxes {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .genre-box {
+            padding: 10px;
+            border: 2px solid #29465B;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+            text-decoration: none; /* Remove underline on hover */
+            color: #29465B; /* Set text color to match border color */
+            box-shadow: 0 0 10px rgba(41, 70, 91, 0.5); /* Initial box-shadow for the glow effect */
+        }
+
+        .genre-box:hover {
+            background-color: #29465B;
+            color: white;
+            box-shadow: 0 0 20px rgba(41, 70, 91, 0.7); /* Increased shadow on hover for the glow effect */
+        }
+  
     </style>
 </head>
 <body>
@@ -272,26 +274,43 @@
 
     <nav>
         <!-- Navigation links with smooth scroll -->
-         <a href="https://rimuru83.github.io/Tempest-Gallery/" target="_blank">Tempest Feedbacks</a>
-        <a href="#shop" class="nav-link">Shop</a>
+        <a href="#home" class="nav-link">Home</a>
+       <a href="#contact" class="nav-link">Contact Us</a>
     </nav>
 
     <section id="home">
-        <h2>Welcome to Obscured Slime Pages!</h2>
+        <h2>Welcome to Obscured Slime Pages Shop!</h2>
         <p>We pride ourselves as the best manga and manhwa provider you can find catering specifically to Kindle and Kobo devices.</p>
     </section>
   
  <!-- New section for photo showcase -->
    <section id="photo-showcase" style="text-align: center;">
-    <h2>These are the Best Photos We Picked</h2>
-    <p>From hundreds of photo feedback by our customers using our manga.</p>
+    <h2>New Release!</h2>
+    <p>Our new release us of December 7, 2023.</p>
     <div class="swiper-container">
-        <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/01.jpeg" alt="Photo 1"></div>
-                <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/02.jpeg" alt="Photo 2"></div>
-                <!-- Add more slides for each photo -->
-                <!-- Continue adding slides up to Photo 22 -->
-                <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/22.jpeg" alt="Photo 22"></div>
+<div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/01.jpeg" alt="Photo 1"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/02.jpeg" alt="Photo 2"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/03.jpeg" alt="Photo 3"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/04.jpeg" alt="Photo 4"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/05.jpeg" alt="Photo 5"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/06.jpeg" alt="Photo 6"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/07.jpeg" alt="Photo 7"></div>
+  <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/08.jpeg" alt="Photo 8"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/09.jpeg" alt="Photo 9"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/10.jpeg" alt="Photo 10"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/11.jpeg" alt="Photo 11"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/12.jpeg" alt="Photo 12"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/13.jpeg" alt="Photo 13"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/14.jpeg" alt="Photo 14"></div>
+  <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/15.jpeg" alt="Photo 15"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/16.jpeg" alt="Photo 16"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/17.jpeg" alt="Photo 17"></div>
+  <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/18.jpeg" alt="Photo 18"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/19.jpeg" alt="Photo 19"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/20.jpeg" alt="Photo 20"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/21.jpeg" alt="Photo 21"></div>
+    <div class="swiper-slide"><img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Tempest%20Gallery/22.jpeg" alt="Photo 22"></div>
            </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -300,8 +319,7 @@
             <div class="swiper-button-prev"></div>
         </div>
     </section>
-  
-    <section id="shop">
+  <section id="shop">
         <h2>SELECT YOUR GENRE</h2>
         <!-- Genre boxes as clickable links -->
         <div class="genre-boxes">
@@ -316,61 +334,26 @@
         <div class="manga-item">
             <!-- Manga item details as before -->
         </div>
-
-        <!-- Add more manga items as needed -->
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>
-            <strong>Welcome to Obscured Slime Pages,</strong> your premier destination for digital manga content.
-        </p>
-        <p>
-            <strong>Our mission is to curate an extensive collection</strong> of high-quality manga, manhwa, and comics titles for enthusiasts worldwide.
-        </p>
-        <p>
-            Comprising computer-savvy individuals and passionate manga and anime fans, we derive immense joy from reading manga and books. Our aim is to share this delightful experience with others. Reading manga on your Kindle or Kobo offers a superior alternative to physical copies—it's way cheaper and allows you to indulge in your favorite reads anywhere.
-        </p>
-
-        <h2>Why Choose Us?</h2>
-        <ol>
-            <li>
-                <strong>Optimized Manga File Size:</strong> While maintaining the quality of manga pages, we prioritize lightweight file sizes, especially for devices with limited storage (less than 8GB). Trust us; with our manga, you can store entire One Piece volumes in just 4GB of device storage. Our manga file sizes range from 20MB to 50MB, exclusively on Kindle.
-            </li>
-            <li>
-                <strong>Manga Quality:</strong> We steadfastly focus on delivering an exceptional reading experience. As avid manga enthusiasts ourselves, we ensure crisp pages and incorporate additional features into our Epub files.
-            </li>
-            <li>
-                <strong>Manga Page Ratio:</strong> Recognizing the diversity in device sizes, we provide perfectly fitted pages to cater to smaller devices.
-            </li>
-            <li>
-                <strong>Efficient Transfer Methods:</strong> Acknowledging our customers' busy lives, we continuously refine our instructions to make the transfer process simple and swift. Comprehensive instructions are included in the files, and our chat support is actively available to guide you should you have any questions.
-            </li>
-            <li>
-                <strong>Engagement through Facebook Group:</strong> For those who avail our manga, we have a dedicated Facebook group. Stay updated on the status of manga titles, the latest additions to our collection, and service updates. Join our community to enhance your manga experience with us.
-            </li>
-        </ol>
-    </section>
+   </section>
   
-   <section id="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-info">
-            <p>
-                <strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=100094584806599&mibextid=ZbWKwL" target="_blank">Message us here</a>
-            </p>
-            <p>
-                <strong>Instagram:</strong> <a href="https://instagram.com/obscured_slime_pages?igshid=MzMyNGUyNmU2YQ==" target="_blank">Message us here</a>
-            </p>
-        </div>
-        <div class="social-icons">
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+        <p>
             <a href="https://www.facebook.com/profile.php?id=100094584806599&mibextid=ZbWKwL" target="_blank">
-                <img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Icons/FB.png" alt="Facebook Logo">
+                <img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Icons/FB.png" alt="Contact Icon" style="width: 20px; margin-right: 10px;">
             </a>
+            <strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=100094584806599&mibextid=ZbWKwL" target="_blank">Message us here</a>
+        </p>
+        <p>
             <a href="https://instagram.com/obscured_slime_pages?igshid=MzMyNGUyNmU2YQ==" target="_blank">
-                <img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Icons/INSTA.png" alt="Instagram Logo">
+                <img src="https://raw.githubusercontent.com/rimuru83/Obscured-Slime-Pages-PH/main/images/Icons/INSTA.png" alt="Contact Icon" style="width: 20px; margin-right: 10px;">
             </a>
-        </div>
-    </section>
+            <strong>Instagram:</strong> <a href="https://instagram.com/obscured_slime_pages?igshid=MzMyNGUyNmU2YQ==" target="_blank">Message us here</a>
+        </p>
+    </div>
+</section>
+
 
    <footer>
         &copy; 2023 Obscured Slime Pages Shop
